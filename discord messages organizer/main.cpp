@@ -68,10 +68,13 @@ void sortDate(const string& directory, const string& output, const string& targe
 
     // Iterate over the directory and print items
     for (const auto& entry : fs::recursive_directory_iterator(directory)) {
+        // Progression Text
         cout << "IN PROGRESSs [SORTING BY DATE]" << endl;
         cout << completed << " / " << totalCount << endl;
+
+        // Start Reading the Lines
         if (fs::is_regular_file(entry.path()) && entry.path().filename() == target) {
-            // cout << "[FILE] " << entry.path() << endl;
+            cout << "[FILE] " << entry.path() << endl;
             ifstream input_file(entry.path());
             if (input_file.is_open()) {
                 string line;
@@ -80,7 +83,7 @@ void sortDate(const string& directory, const string& output, const string& targe
                 while (getline(input_file, line)) {
                     string timestamp = extractTimestamp(line);
 
-                    // IF EMPTY
+                    // If lines are empty
                     if (!timestamp.empty()) { 
                         messages.push_back({ line, timestamp }); 
                     }
@@ -114,7 +117,7 @@ void sortDate(const string& directory, const string& output, const string& targe
         output_file << entry.text << endl; 
     }
 
-    // CLOSE FILE
+    // Close file
     output_file.close();
 }
 
