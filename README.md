@@ -17,4 +17,5 @@ This should be your output:
 You can then open the open the .txt file with a text editor of your choice. Using default notepad may take some time to open.  
 ![After running](https://github.com/its-x3non/discord-messages-organizer/assets/87145730/b67265df-7812-49c1-a7e9-17a462717fea)
 
-### Thank you for using! :)
+### Thank you for using!
+This is my first ever public program so I hope you guys enjoy it :)
