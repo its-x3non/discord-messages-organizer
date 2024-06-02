@@ -121,12 +121,12 @@ void sortDate(const string& directory, const string& output, const string& targe
 // Checks for Directory
 void directoryCheck(const string& directory) {
     if (!fs::exists(directory)) {
-        std::cerr << "Directory does not exist.\n";
+        cerr << "Directory does not exist." << endl;
         return;
     }
 
     if (!fs::is_directory(directory)) {
-        std::cerr << "Path is not a directory.\n";
+        cerr << "Path is not a directory." << endl;
         return;
     }
 }
