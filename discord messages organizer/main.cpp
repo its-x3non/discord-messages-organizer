@@ -1,3 +1,5 @@
+// Last Upadted: 3:55 PM PST - 6/2/2024
+
 #include <iostream>
 #include <filesystem>
 #include <fstream>
@@ -10,13 +12,13 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-// MESSAGE STRUCT
+// Message Struct
 struct Message {
     string text;
     string timestamp;
 };
 
-// TIMESTAMP
+// Extract Timestamp
 string extractTimestamp(const string& line) {
     regex timestamp_regex("\"Timestamp\":\\s*\"([^\"]+)\"");
     smatch match;
@@ -27,7 +29,7 @@ string extractTimestamp(const string& line) {
     return "";
 }
 
-// FUNCTIONS
+// Functions
 void sortDate(const string&, const string&, const string&, const int&);
 void directoryCheck(const string&);
 
@@ -48,8 +50,10 @@ int main()
         }
     }
 
+    // Sorting Time
     sortDate(path, outputFile, targetFile, totalCount);
     
+    // Completion
     cout << "Open " << outputFile << " for your organized messages :3 " << endl;
     cout << "I recommend using notepad++ since big file lol" << endl;
     cout << "Thank u for using please like and subscribe -x3non" << endl;
@@ -69,7 +73,7 @@ void sortDate(const string& directory, const string& output, const string& targe
     // Iterate over the directory and print items
     for (const auto& entry : fs::recursive_directory_iterator(directory)) {
         // Progression Text
-        cout << "IN PROGRESSs [SORTING BY DATE]" << endl;
+        cout << "IN PROGRESS [SORTING BY DATE]" << endl;
         cout << completed << " / " << totalCount << endl;
 
         // Start Reading the Lines
