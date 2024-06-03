@@ -1,4 +1,4 @@
-// Last Updated: 3:55 PM PST - 6/2/2024
+// Last Updated: 8:25 PM PST - 6/2/2024
 
 #include <iostream>
 #include <filesystem>
@@ -18,21 +18,12 @@ struct Message {
     string timestamp;
 };
 
-// Extract Timestamp
-string extractTimestamp(const string& line) {
-    regex timestamp_regex("\"Timestamp\":\\s*\"([^\"]+)\"");
-    smatch match;
-
-    if (regex_search(line, match, timestamp_regex) && match.size() > 1) 
-        return match.str(1);
-
-    return "";
-}
-
 // Functions
+string extractTimestamp(const string&);
 void sortDate(const string&, const string&, const string&, const int&);
 void directoryCheck(const string&);
 
+// Main :3
 int main()
 {
 
@@ -56,11 +47,22 @@ int main()
     // Completion
     cout << "Open " << outputFile << " for your organized messages :3 " << endl;
     cout << "I recommend using notepad++ since big file lol" << endl;
-    cout << "Thank u for using please like and subscribe -x3non" << endl;
+    cout << "Thank u for using! Please Like and Subscribe -x3non" << endl;
     system("pause");
 }
 
-// LOG MESSAGES BY DATE
+// Extract Timestamp
+string extractTimestamp(const string& line) {
+    regex timestamp_regex("\"Timestamp\":\\s*\"([^\"]+)\"");
+    smatch match;
+
+    if (regex_search(line, match, timestamp_regex) && match.size() > 1)
+        return match.str(1);
+
+    return "";
+}
+
+// Log Messages by Date
 void sortDate(const string& directory, const string& output, const string& target, const int& totalCount) {
     // Completed Count
     int completed = 0;
@@ -68,6 +70,7 @@ void sortDate(const string& directory, const string& output, const string& targe
     // Check for valid directory
     directoryCheck(directory);
 
+    // Creates a Vector for Messages
     vector<Message> messages;
 
     // Iterate over the directory and print items
