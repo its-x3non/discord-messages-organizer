@@ -1,4 +1,4 @@
-// Last Upadted: 3:55 PM PST - 6/2/2024
+// Last Updated: 3:55 PM PST - 6/2/2024
 
 #include <iostream>
 #include <filesystem>
@@ -104,7 +104,7 @@ void sortDate(const string& directory, const string& output, const string& targe
         system("cls");
     }
 
-    // Sort log entries by timestamp
+    // Sort messages by timestamp
     sort(messages.begin(), messages.end(), [](const Message& a, const Message& b) { 
         return a.timestamp < b.timestamp; 
         });
@@ -116,7 +116,7 @@ void sortDate(const string& directory, const string& output, const string& targe
         return;
     }
 
-    // Write sorted entries to the output file
+    // Write sorted messages to output file
     for (const auto& entry : messages){ 
         output_file << entry.text << endl; 
     }
@@ -125,7 +125,7 @@ void sortDate(const string& directory, const string& output, const string& targe
     output_file.close();
 }
 
-// Checks for Directory
+// Checks for Valid Directory
 void directoryCheck(const string& directory) {
     if (!fs::exists(directory)) {
         cerr << "Directory does not exist." << endl;
