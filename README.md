@@ -6,9 +6,8 @@ It takes at least 30 days for you to get your data from Discord.
 
 ## How to use
 After you download the .exe file from release, drag and drop it to your package folder just like this:  
-![exe in folder](https://github.com/its-x3non/discord-messages-organizer/assets/87145730/7307c375-8bb7-4e05-968b-57f51dc41073)
-
-### Make sure that the "messages" folder is all lowercase
+![exe in folder](https://github.com/its-x3non/discord-messages-organizer/assets/87145730/7307c375-8bb7-4e05-968b-57f51dc41073)\n
+Make sure that the "messages" folder is all lowercase
 
 It should look like this when you run it:  
 ![what it looks like when its ran](https://github.com/its-x3non/discord-messages-organizer/assets/87145730/3b91001b-914e-44d6-98d8-e9ebd9c1352c)
