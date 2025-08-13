@@ -1,8 +1,9 @@
 # Discord Messages Organizer
-This program organizes your messages by date so you can see your first ever message you've sent!
+This program organizes your messages by date so you can see your first (or oldest) message you've sent!  
+Keep in mind that it only gathers available messages, so messages that were deleted are not there.
 
 This uses the data you've requested from Discord, so if you don't know how, here is a link showing you [how to request your data](https://support.discord.com/hc/en-us/articles/360004027692-Requesting-a-Copy-of-your-Data).  
-It takes at least 30 days for you to get your data from Discord.
+It takes at least 30 days for you to get your requested data from Discord.
 
 ## How to use
 After you download the .exe file from release, drag and drop it to your package folder just like this:  
